@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,84 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Toy3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCi-TA-ld4">
+                                <rect key="frame" x="43" y="117" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYU-md-17y">
+                                <rect key="frame" x="43" y="146" width="289" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bi6-DU-vup">
+                                <rect key="frame" x="43" y="244" width="289" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yc-dS-d8a">
+                                <rect key="frame" x="139" y="318" width="75" height="31"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="SubmitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7B-dG-E9f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing to see" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUu-uk-7bZ">
+                                <rect key="frame" x="5" y="357" width="343" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Year:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Oq-cA-Ir5">
+                                <rect key="frame" x="43" y="209" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0yc-dS-d8a" firstAttribute="centerX" secondItem="WUu-uk-7bZ" secondAttribute="centerX" id="77y-7D-EF6"/>
+                            <constraint firstItem="pYU-md-17y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7vC-AM-tGV"/>
+                            <constraint firstItem="gCi-TA-ld4" firstAttribute="leading" secondItem="pYU-md-17y" secondAttribute="leading" id="AXk-UY-HU6"/>
+                            <constraint firstItem="WUu-uk-7bZ" firstAttribute="top" secondItem="0yc-dS-d8a" secondAttribute="bottom" constant="8" symbolic="YES" id="DfB-tE-bQR"/>
+                            <constraint firstItem="WUu-uk-7bZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Fwg-iD-3HW"/>
+                            <constraint firstItem="0yc-dS-d8a" firstAttribute="top" secondItem="bi6-DU-vup" secondAttribute="bottom" constant="44" id="HJw-p5-mxw"/>
+                            <constraint firstItem="0yc-dS-d8a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="JC9-bo-muS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WUu-uk-7bZ" secondAttribute="bottom" constant="273" id="LdT-ww-qHE"/>
+                            <constraint firstItem="gCi-TA-ld4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="NtA-3n-io1"/>
+                            <constraint firstItem="pYU-md-17y" firstAttribute="leading" secondItem="9Oq-cA-Ir5" secondAttribute="leading" id="OVH-f5-KuZ"/>
+                            <constraint firstItem="0yc-dS-d8a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RlF-cC-lYm"/>
+                            <constraint firstItem="9Oq-cA-Ir5" firstAttribute="top" secondItem="pYU-md-17y" secondAttribute="bottom" constant="33" id="Sc8-MM-P7d"/>
+                            <constraint firstItem="bi6-DU-vup" firstAttribute="top" secondItem="9Oq-cA-Ir5" secondAttribute="bottom" constant="14" id="YeN-YZ-qMh"/>
+                            <constraint firstItem="pYU-md-17y" firstAttribute="trailing" secondItem="bi6-DU-vup" secondAttribute="trailing" id="bXP-Qs-6SE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WUu-uk-7bZ" secondAttribute="trailing" constant="27" id="dkp-8I-SEN"/>
+                            <constraint firstItem="pYU-md-17y" firstAttribute="top" secondItem="gCi-TA-ld4" secondAttribute="bottom" constant="8" symbolic="YES" id="eIu-g5-cWs"/>
+                            <constraint firstItem="gCi-TA-ld4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="o2f-CA-MHk"/>
+                            <constraint firstItem="9Oq-cA-Ir5" firstAttribute="leading" secondItem="bi6-DU-vup" secondAttribute="leading" id="xHB-jc-P56"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ClassLabel" destination="9Oq-cA-Ir5" id="jN1-ZL-ZnZ"/>
+                        <outlet property="ClassTextField" destination="bi6-DU-vup" id="9KV-Bn-Yee"/>
+                        <outlet property="DisplayLabel" destination="WUu-uk-7bZ" id="WTO-nR-U5X"/>
+                        <outlet property="NameLabel" destination="gCi-TA-ld4" id="Tnj-80-b9F"/>
+                        <outlet property="NameTextField" destination="pYU-md-17y" id="ijv-t2-ZOf"/>
+                        <outlet property="SubmitButton" destination="0yc-dS-d8a" id="STV-Jk-StC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
