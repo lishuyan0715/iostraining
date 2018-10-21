@@ -74,6 +74,11 @@ UIViewController {
         }else{
             enterSubmitMode()
         }
+        
+        if (Cat.count == 0){
+            Cat.addCat(name: "Alice", age: 1, image: #imageLiteral(resourceName: "cat3"), type: "Brithish Shorthair")
+            Cat.addCat(name: "Bob", age: 2, image: #imageLiteral(resourceName: "cat2"), type: "American Shorthair")
+        }
     }
 
 

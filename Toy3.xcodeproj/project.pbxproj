@@ -14,6 +14,10 @@
 		367076FF217C01AC0081DF78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367076FD217C01AC0081DF78 /* LaunchScreen.storyboard */; };
 		3670770A217C01AC0081DF78 /* Toy3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36707709217C01AC0081DF78 /* Toy3Tests.swift */; };
 		36707715217C01AC0081DF78 /* Toy3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36707714217C01AC0081DF78 /* Toy3UITests.swift */; };
+		369D5EC0217C202E0065CC70 /* CatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D5EBF217C202E0065CC70 /* CatTableViewController.swift */; };
+		369D5EC6217C283D0065CC70 /* CatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D5EC5217C283D0065CC70 /* CatTableViewCell.swift */; };
+		369D5EC9217C31FB0065CC70 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D5EC8217C31FB0065CC70 /* Cat.swift */; };
+		369D5ECB217C36990065CC70 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D5ECA217C36990065CC70 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		36707710217C01AC0081DF78 /* Toy3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toy3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36707714217C01AC0081DF78 /* Toy3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toy3UITests.swift; sourceTree = "<group>"; };
 		36707716217C01AC0081DF78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		369D5EBF217C202E0065CC70 /* CatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewController.swift; sourceTree = "<group>"; };
+		369D5EC5217C283D0065CC70 /* CatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewCell.swift; sourceTree = "<group>"; };
+		369D5EC8217C31FB0065CC70 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		369D5ECA217C36990065CC70 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 			children = (
 				367076F4217C01AB0081DF78 /* AppDelegate.swift */,
 				367076F6217C01AB0081DF78 /* ViewController.swift */,
+				369D5EBF217C202E0065CC70 /* CatTableViewController.swift */,
+				369D5ECA217C36990065CC70 /* DetailViewController.swift */,
+				369D5EC5217C283D0065CC70 /* CatTableViewCell.swift */,
+				369D5EC7217C31B10065CC70 /* Models */,
 				367076F8217C01AB0081DF78 /* Main.storyboard */,
 				367076FB217C01AC0081DF78 /* Assets.xcassets */,
 				367076FD217C01AC0081DF78 /* LaunchScreen.storyboard */,
@@ -123,6 +135,14 @@
 				36707716217C01AC0081DF78 /* Info.plist */,
 			);
 			path = Toy3UITests;
+			sourceTree = "<group>";
+		};
+		369D5EC7217C31B10065CC70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				369D5EC8217C31FB0065CC70 /* Cat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369D5EC6217C283D0065CC70 /* CatTableViewCell.swift in Sources */,
 				367076F7217C01AB0081DF78 /* ViewController.swift in Sources */,
+				369D5EC9217C31FB0065CC70 /* Cat.swift in Sources */,
+				369D5ECB217C36990065CC70 /* DetailViewController.swift in Sources */,
+				369D5EC0217C202E0065CC70 /* CatTableViewController.swift in Sources */,
 				367076F5217C01AB0081DF78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
