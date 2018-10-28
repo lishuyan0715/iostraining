@@ -76,11 +76,16 @@ UIViewController {
         }
         
         if (Cat.count == 0){
-            Cat.addCat(name: "Alice", age: 1, image: #imageLiteral(resourceName: "cat3"), type: "Brithish Shorthair")
-            Cat.addCat(name: "Bob", age: 2, image: #imageLiteral(resourceName: "cat2"), type: "American Shorthair")
-        }
+            Cat.loadCats { (results) in
+                for dict in results {
+                    let imageURL = URL(string: dict["image"]!)
+                    let image = UIImage(data: try!   Data(contentsOf: imageURL!))
+                    Cat.addCat(name: dict["name"]!, age: Int(dict["age"]!), image: image!, type: dict["type"]!)
+                }
+            }
     }
 
-
+    
 }
 
+}
