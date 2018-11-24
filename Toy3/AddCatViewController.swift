@@ -83,6 +83,9 @@ class AddCatViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 if (age == -1){
                     cell.TextView.text = "Age"
                 } else {
+                    if(age != -1){
+                    cell.PickerView.selectRow(age, inComponent: 0, animated: false)
+                    }
                     cell.TextView.text = "Age  " + String(age)
                 }
             } else {
@@ -117,6 +120,7 @@ class AddCatViewController: UIViewController, UITableViewDelegate, UITableViewDa
             } else {
                 isPickerViewOpened = true
             }
+            
             tableView.reloadSections(IndexSet.init(integer: 1),
                                      with: .automatic)
         }
